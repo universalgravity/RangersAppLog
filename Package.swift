@@ -23,7 +23,18 @@ let package = Package(
     // Targets can depend on other targets in this package and products from dependencies.
     .target(
       name: "RangersAppLog",
-      publicHeadersPath: "Headers"
+      publicHeadersPath: "Headers",
+      linkerSettings: [
+        .linkedFramework("z"),
+        .linkedFramework("sqlite3"),
+        .linkedFramework("CoreGraphics"),
+        .linkedFramework("CoreFoundation"),
+        .linkedFramework("Foundation"),
+        .linkedFramework("UIKit"),
+        .linkedFramework("Security"),
+        .linkedFramework("CoreTelephony"),
+        .linkedFramework("SystemConfiguration"),
+      ]
     ),
     .binaryTarget(
       name: "libEncryptor",
