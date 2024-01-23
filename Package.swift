@@ -25,8 +25,8 @@ let package = Package(
       name: "RangersAppLog",
       publicHeadersPath: "Headers",
       linkerSettings: [
-        .linkedFramework("z"),
-        .linkedFramework("sqlite3"),
+        .linkedLibrary("z"),
+        .linkedLibrary("sqlite3"),
         .linkedFramework("CoreGraphics"),
         .linkedFramework("CoreFoundation"),
         .linkedFramework("Foundation"),
